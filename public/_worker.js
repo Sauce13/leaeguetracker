@@ -32,7 +32,7 @@ export function resolveApiSnapshotPath(url) {
     return `/__api/matches/${encodeSnapshotKey(url.searchParams.get("id"))}.json`;
   }
   if (url.pathname === "/api/players/player" && url.searchParams.get("id")) {
-    return `/__api/players/${encodeSnapshotKey(url.searchParams.get("id"))}.json`;
+    return `/__api/players/${encodeSnapshotKey(encodeURIComponent(url.searchParams.get("id")))}.json`;
   }
   return SNAPSHOT_ROUTES.get(url.pathname) ?? null;
 }
