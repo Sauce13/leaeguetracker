@@ -1,6 +1,7 @@
 const PRIVATE_API_PREFIXES = ["/api/admin", "/api/import", "/api/lcu"];
 
 const SNAPSHOT_ROUTES = new Map([
+  ["/api/explorer/riot", "/__api/explorer-riot.json"],
   ["/api/analytics-meta", "/__api/analytics-meta.json"],
   ["/api/team-builder-prediction-model", "/__api/team-builder-prediction-model.json"],
 ]);
